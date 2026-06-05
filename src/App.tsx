@@ -72,6 +72,32 @@ import preTreinoLimao300gImage from './assets/images/pre_treino_limao_300g.png';
 // @ts-ignore
 import zma60capImage from './assets/images/zma_60cap.png';
 
+function OrendaLogo({ className = "w-10 h-10" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="boltGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#DF2A2A" />
+          <stop offset="100%" stopColor="#7a0000" />
+        </linearGradient>
+        <linearGradient id="boltGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FF5C5C" />
+          <stop offset="100%" stopColor="#D91616" />
+        </linearGradient>
+        <linearGradient id="boltGradCenter" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FFAA00" />
+          <stop offset="50%" stopColor="#FF3300" />
+          <stop offset="100%" stopColor="#CC0000" />
+        </linearGradient>
+      </defs>
+      <polygon points="175,0 120,40 135,110" fill="url(#boltGradLeft)" />
+      <polygon points="120,40 25,120 85,120 10,200 135,110" fill="url(#boltGradCenter)" />
+      <polygon points="175,0 135,110 85,120 120,40" fill="url(#boltGradRight)" />
+      <polygon points="85,120 10,200 135,110" fill="url(#boltGradLeft)" opacity="0.6" />
+    </svg>
+  );
+}
+
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>("Todos");
@@ -143,15 +169,13 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo area */}
-            <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('inicio')}>
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-crimson to-brand-neon-red flex items-center justify-center shadow-lg shadow-brand-crimson/20">
-                <Flame className="w-6 h-6 text-white stroke-[2.5]" />
-              </div>
+            <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollToSection('inicio')}>
+              <OrendaLogo className="w-10 h-10 drop-shadow-[0_0_8px_rgba(239,68,68,0.4)] animate-pulse" />
               <div>
-                <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-white block">
+                <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-white block leading-none">
                   ORENDA
                 </span>
-                <span className="font-mono text-[9px] uppercase tracking-widest text-brand-neon-red block -mt-1 font-bold">
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-neon-red block mt-0.5 font-bold leading-none">
                   PERFORMANCE
                 </span>
               </div>
@@ -730,8 +754,8 @@ export default function App() {
                   </div>
 
                   <div className="bg-brand-black/80 rounded-lg p-3 text-center border border-brand-gray">
-                    <span className="text-[10px] font-mono text-gray-400 block uppercase">CONSELHO REGIONAL</span>
-                    <span className="text-[11px] font-mono font-bold text-brand-neon-red">QUALIDADE & SEGURANÇA CERTIFICADA</span>
+                    <span className="text-[10px] font-mono text-gray-400 block uppercase">CONSELHO REGIONAL DE QUÍMICA</span>
+                    <span className="text-xs font-mono font-bold text-brand-neon-red tracking-tight">CRQ-VI- 04368199</span>
                   </div>
 
                 </div>
@@ -1642,7 +1666,7 @@ export default function App() {
           
           <div className="max-w-3xl mx-auto space-y-4">
             <div className="w-12 h-12 rounded-full bg-brand-neon-red/10 border border-brand-neon-red/30 flex items-center justify-center text-brand-neon-red mx-auto mb-6">
-              <Flame className="w-6 h-6 animate-pulse" />
+              <OrendaLogo className="w-6 h-6 animate-pulse drop-shadow-[0_0_6px_rgba(239,68,68,0.5)]" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-none">
               Sua evolução não precisa ser no escuro.
@@ -1687,10 +1711,8 @@ export default function App() {
             
             {/* Footer Column 1 - Brand description */}
             <div className="space-y-4 md:col-span-2">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-brand-crimson flex items-center justify-center text-white">
-                  <Flame className="w-5 h-5 stroke-[2.5]" />
-                </div>
+              <div className="flex items-center gap-2.5">
+                <OrendaLogo className="w-10 h-10 drop-shadow-[0_0_6px_rgba(239,68,68,0.4)]" />
                 <span className="font-display font-extrabold text-white text-lg sm:text-xl tracking-tight">
                   ORENDA PERFORMANCE
                 </span>
@@ -1740,7 +1762,7 @@ export default function App() {
               <h4 className="text-xs uppercase font-mono tracking-widest text-white font-bold">Atendimento</h4>
               <ul className="space-y-2 text-xs">
                 <li className="text-gray-500">
-                  Responsável Técnico: <span className="text-gray-300 font-medium">Eduardo Donzelli</span>
+                  Responsável Técnico: <span className="text-gray-300 font-medium">Eduardo Donzelli (CRQ-VI- 04368199)</span>
                 </li>
                 <li className="flex items-center gap-1.5 text-gray-300">
                   <MessageCircle className="w-3.5 h-3.5 text-brand-neon-red" />
@@ -1755,13 +1777,18 @@ export default function App() {
           </div>
 
           {/* Bottom Copyright segment */}
-          <div className="pt-8 border-t border-brand-gray flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-600 gap-4">
-            <div>
-              &copy; {new Date().getFullYear()} Orenda Performance. Todos os direitos reservados.
-              <span className="block sm:inline sm:ml-2 text-gray-700">Integrado à Orenda Biotech Corp.</span>
+          <div className="pt-8 border-t border-brand-gray flex flex-col md:flex-row items-center justify-between text-[11px] text-gray-600 gap-4">
+            <div className="space-y-1 text-center md:text-left">
+              <div>
+                &copy; {new Date().getFullYear()} Orenda Performance. Todos os direitos reservados.
+                <span className="block sm:inline sm:ml-2 text-gray-700">Integrado à Orenda Biotech Corp.</span>
+              </div>
+              <div className="text-gray-500 font-light">
+                <span className="font-semibold text-gray-400">CNPJ:</span> 40.864.537/0001-14 | <span className="font-semibold text-gray-400">Endereço:</span> Rua Maria Teresa Ribeiro de Andrade, 521 - Alto da Boa Vista - Restinga/SP
+              </div>
             </div>
             
-            <div className="flex items-center gap-4 text-xs">
+            <div className="flex items-center gap-4 text-[11px]">
               <a 
                 href={`https://wa.me/${whatsappNumber}`} 
                 target="_blank" 
@@ -1773,7 +1800,7 @@ export default function App() {
                 <span>WhatsApp Oficial</span>
               </a>
               <span className="text-gray-800">|</span>
-              <span className="font-mono text-[10px] text-gray-700">Responsável: Eduardo Donzelli</span>
+              <span className="font-mono text-[10px] text-gray-700">Resp. Técnico: Eduardo Donzelli (CRQ-VI- 04368199)</span>
             </div>
           </div>
 
