@@ -46,9 +46,13 @@ import {
 // @ts-ignore
 import creatinaImage from './assets/images/creatina_300g.png';
 // @ts-ignore
+import creatina150gImage from './assets/images/creatina_150g.png';
+// @ts-ignore
 import wheyBlendImage from './assets/images/whey_blend_chocolate.png';
 // @ts-ignore
 import betaAlaninaImage from './assets/images/beta_alanina_150g.png';
+// @ts-ignore
+import betaAlanina300gImage from './assets/images/beta_alanina_300g.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1010,13 +1014,20 @@ export default function App() {
 
                       {/* Mock Product Canister Visual Preview */}
                       <div className={`h-44 w-full rounded-lg border flex items-center justify-center p-3 relative overflow-hidden transition-all duration-300 ${
-                        p.id === 'creatina-300g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g'
+                        p.id === 'creatina-300g' || p.id === 'creatina-150g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g' || p.id === 'beta-alanina-300g'
                           ? 'bg-white border-white/20'
                           : 'bg-brand-black border-brand-gray/60'
                       }`}>
                         {p.id === 'creatina-300g' ? (
                           <img 
                             src={creatinaImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'creatina-150g' ? (
+                          <img 
+                            src={creatina150gImage} 
                             alt={p.name} 
                             className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
                             referrerPolicy="no-referrer"
@@ -1031,6 +1042,13 @@ export default function App() {
                         ) : p.id === 'beta-alanina-150g' ? (
                           <img 
                             src={betaAlaninaImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'beta-alanina-300g' ? (
+                          <img 
+                            src={betaAlanina300gImage} 
                             alt={p.name} 
                             className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
                             referrerPolicy="no-referrer"

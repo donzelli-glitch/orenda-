@@ -14,10 +14,11 @@ export const pricesConfig = {
   kitGanhoMassaInteligente: "Sob Consulta",
 
   // Products
-  creatina150g: "Sob Consulta",
+  creatina150g: "R$ 51,67",
   creatina300g: "R$ 73,85",
   whey900g: "R$ 233,78",
   betaAlanina150g: "R$ 49,27",
+  betaAlanina300g: "R$ 69,20",
   glutamina150g: "Sob Consulta",
   glutamina300g: "Sob Consulta",
   bcaa60cap: "Sob Consulta",
@@ -249,6 +250,21 @@ export const products: ProductItem[] = [
     ],
     price: pricesConfig.betaAlanina150g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.betaAlanina150g,
     whatsappMessage: `Olá, tenho interesse na Beta-Alanina Orenda Performance 150g. Quero saber mais sobre o produto, forma de uso e disponibilidade. Valor: ${pricesConfig.betaAlanina150g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.betaAlanina150g}.`
+  },
+  {
+    id: "beta-alanina-300g",
+    name: "Beta-Alanina Orenda Performance 300g",
+    category: "Resistência e Intensidade",
+    badge: "Super Foco",
+    description: "Versão maior da Beta-Alanina Orenda, ideal para quem busca melhor custo-benefício e treinos intensos com uso contínuo.",
+    benefits: [
+      "Perfeito para quem realiza treinos frequentes e de alta intensidade",
+      "Apoia a rotina contínua de resistência e alta performance",
+      "Excelente custo-benefício para ciclistas, corredores, praticantes de cross training e musculação",
+      "Dosagem otimizada para praticidade no dia a dia"
+    ],
+    price: pricesConfig.betaAlanina300g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.betaAlanina300g,
+    whatsappMessage: `Olá, tenho interesse na Beta-Alanina Orenda Performance 300g. Quero saber mais sobre o produto, forma de uso e disponibilidade. Valor: ${pricesConfig.betaAlanina300g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.betaAlanina300g}.`
   },
   {
     id: "glutamina-150g",
