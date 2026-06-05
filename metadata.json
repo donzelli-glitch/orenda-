@@ -1,0 +1,6 @@
+{
+  "name": "Orenda Performance",
+  "description": "Landing page de alta conversão para a linha premium de suplementos esportivos da Orenda Biotech.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
