@@ -53,6 +53,14 @@ import wheyBlendImage from './assets/images/whey_blend_chocolate.png';
 import betaAlaninaImage from './assets/images/beta_alanina_150g.png';
 // @ts-ignore
 import betaAlanina300gImage from './assets/images/beta_alanina_300g.png';
+// @ts-ignore
+import glutamina150gImage from './assets/images/glutamina_150g.png';
+// @ts-ignore
+import glutamina300gImage from './assets/images/glutamina_300g.png';
+// @ts-ignore
+import bcaa60capImage from './assets/images/bcaa_60cap.png';
+// @ts-ignore
+import bcaa120capImage from './assets/images/bcaa_120cap.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1014,7 +1022,7 @@ export default function App() {
 
                       {/* Mock Product Canister Visual Preview */}
                       <div className={`h-44 w-full rounded-lg border flex items-center justify-center p-3 relative overflow-hidden transition-all duration-300 ${
-                        p.id === 'creatina-300g' || p.id === 'creatina-150g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g' || p.id === 'beta-alanina-300g'
+                        p.id === 'creatina-300g' || p.id === 'creatina-150g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g' || p.id === 'beta-alanina-300g' || p.id === 'glutamina-150g' || p.id === 'glutamina-300g' || p.id === 'bcaa-60cap' || p.id === 'bcaa-120cap'
                           ? 'bg-white border-white/20'
                           : 'bg-brand-black border-brand-gray/60'
                       }`}>
@@ -1049,6 +1057,34 @@ export default function App() {
                         ) : p.id === 'beta-alanina-300g' ? (
                           <img 
                             src={betaAlanina300gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'glutamina-150g' ? (
+                          <img 
+                            src={glutamina150gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'glutamina-300g' ? (
+                          <img 
+                            src={glutamina300gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'bcaa-60cap' ? (
+                          <img 
+                            src={bcaa60capImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'bcaa-120cap' ? (
+                          <img 
+                            src={bcaa120capImage} 
                             alt={p.name} 
                             className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
                             referrerPolicy="no-referrer"
