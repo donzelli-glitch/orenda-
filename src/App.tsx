@@ -61,6 +61,16 @@ import glutamina300gImage from './assets/images/glutamina_300g.png';
 import bcaa60capImage from './assets/images/bcaa_60cap.png';
 // @ts-ignore
 import bcaa120capImage from './assets/images/bcaa_120cap.png';
+// @ts-ignore
+import preTreinoFrutas150gImage from './assets/images/pre_treino_frutas_150g.png';
+// @ts-ignore
+import preTreinoFrutas300gImage from './assets/images/pre_treino_frutas_300g.png';
+// @ts-ignore
+import preTreinoLimao150gImage from './assets/images/pre_treino_limao_150g.png';
+// @ts-ignore
+import preTreinoLimao300gImage from './assets/images/pre_treino_limao_300g.png';
+// @ts-ignore
+import zma60capImage from './assets/images/zma_60cap.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1022,7 +1032,7 @@ export default function App() {
 
                       {/* Mock Product Canister Visual Preview */}
                       <div className={`h-44 w-full rounded-lg border flex items-center justify-center p-3 relative overflow-hidden transition-all duration-300 ${
-                        p.id === 'creatina-300g' || p.id === 'creatina-150g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g' || p.id === 'beta-alanina-300g' || p.id === 'glutamina-150g' || p.id === 'glutamina-300g' || p.id === 'bcaa-60cap' || p.id === 'bcaa-120cap'
+                        p.id === 'creatina-300g' || p.id === 'creatina-150g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g' || p.id === 'beta-alanina-300g' || p.id === 'glutamina-150g' || p.id === 'glutamina-300g' || p.id === 'bcaa-60cap' || p.id === 'bcaa-120cap' || p.id === 'pre-treino-frutas-150g' || p.id === 'pre-treino-frutas-300g' || p.id === 'pre-treino-limao-150g' || p.id === 'pre-treino-limao-300g' || p.id === 'zma-60cap'
                           ? 'bg-white border-white/20'
                           : 'bg-brand-black border-brand-gray/60'
                       }`}>
@@ -1085,6 +1095,41 @@ export default function App() {
                         ) : p.id === 'bcaa-120cap' ? (
                           <img 
                             src={bcaa120capImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'pre-treino-frutas-150g' ? (
+                          <img 
+                            src={preTreinoFrutas150gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'pre-treino-frutas-300g' ? (
+                          <img 
+                            src={preTreinoFrutas300gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'pre-treino-limao-150g' ? (
+                          <img 
+                            src={preTreinoLimao150gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'pre-treino-limao-300g' ? (
+                          <img 
+                            src={preTreinoLimao300gImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'zma-60cap' ? (
+                          <img 
+                            src={zma60capImage} 
                             alt={p.name} 
                             className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
                             referrerPolicy="no-referrer"

@@ -6,12 +6,13 @@
 // Central Pricing Configuration - edit prices here!
 export const pricesConfig = {
   // Kits (use "XX,XX" if price is not specified, or any decimal value you want)
-  kitForcaMassa: "Sob Consulta",
-  kitResistenciaIntensidade: "Sob Consulta",
-  kitRecuperacaoPremium: "Sob Consulta",
-  kitStarter: "Sob Consulta",
-  kitAtleta: "Sob Consulta",
-  kitGanhoMassaInteligente: "Sob Consulta",
+  kitForcaMassa: "R$ 307,00",
+  kitResistenciaIntensidade: "R$ 172,90",
+  kitRecuperacaoPremium: "R$ 386,90",
+  kitStarter: "R$ 156,90",
+  kitAtleta: "R$ 165,80",
+  kitGanhoMassaInteligente: "R$ 419,00",
+  kitAlphaRage: "R$ 148,90",
 
   // Products
   creatina150g: "R$ 51,67",
@@ -23,9 +24,11 @@ export const pricesConfig = {
   glutamina300g: "R$ 135,02",
   bcaa60cap: "R$ 40,84",
   bcaa120cap: "R$ 61,13",
-  zma60cap: "Sob Consulta",
-  zma120cap: "Sob Consulta",
-  colageno300g: "R$ 66,90",
+  zma60cap: "R$ 33,80",
+  preTreinoFrutas150g: "R$ 64,29",
+  preTreinoFrutas300g: "R$ 96,40",
+  preTreinoLimao150g: "R$ 65,04",
+  preTreinoLimao300g: "R$ 104,84",
 };
 
 export interface ProductItem {
@@ -103,23 +106,23 @@ export const kits: KitItem[] = [
   {
     id: "kit-recuperacao-premium",
     name: "Kit Recuperação Premium",
-    goal: "Pós-treino, suporte proteico e cuidado corporal",
+    goal: "Pós-treino, suporte proteico e recuperação avançada",
     badge: "Melhor custo-benefício",
     productsInvolved: [
       "Whey Blend Orenda Performance 900g",
       "Glutamina Orenda Performance 300g",
-      "Colágeno Orenda Performance 300g"
+      "BCAA Orenda Performance 120 cápsulas"
     ],
-    description: "Combo voltado para quem quer fortalecer a rotina pós-treino, aumentar o consumo diário de proteínas e manter uma estratégia de autocuidado e recuperação nutricional.",
+    description: "Combo completo voltado para quem quer consolidar a rotina pós-treino, potencializar a recuperação muscular, manter alto consumo proteico e nutrir fibras musculares com eficácia.",
     benefits: [
-      "Whey como fonte proteica",
-      "Glutamina para complementar a rotina nutricional",
-      "Colágeno para autocuidado diário",
-      "Ideal para quem treina e quer manter uma rotina mais completa",
-      "Boa opção para quem busca constância e cuidado de dentro para fora"
+      "Whey como fonte proteica de alto valor biológico",
+      "Glutamina para complementar a rotina de suporte nutricional",
+      "BCAA para auxiliar na recuperação e diminuição do catabolismo",
+      "Ideal para praticantes frequentes com maior desgaste muscular",
+      "Excelente custo-benefício para quem busca constância de dentro para fora"
     ],
     price: pricesConfig.kitRecuperacaoPremium === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitRecuperacaoPremium,
-    whatsappMessage: `Olá, tenho interesse no Kit Recuperação Premium da Orenda Performance. Ele vem com Whey Blend 900g, Glutamina 300g e Colágeno 300g. Quero saber mais sobre disponibilidade, forma de uso e valor. Preço: ${pricesConfig.kitRecuperacaoPremium === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitRecuperacaoPremium}.`
+    whatsappMessage: `Olá, tenho interesse no Kit Recuperação Premium da Orenda Performance. Ele vem com Whey Blend 900g, Glutamina 300g e BCAA 120 cápsulas. Quero saber mais sobre disponibilidade, forma de uso e valor. Preço: ${pricesConfig.kitRecuperacaoPremium === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitRecuperacaoPremium}.`
   },
   {
     id: "kit-starter-orenda",
@@ -186,6 +189,26 @@ export const kits: KitItem[] = [
     ],
     price: pricesConfig.kitGanhoMassaInteligente === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitGanhoMassaInteligente,
     whatsappMessage: `Olá, tenho interesse no Kit Ganho de Massa Inteligente da Orenda Performance. Ele vem com Whey Blend 900g, Creatina 300g, Glutamina 300g e ZMA 60 cápsulas. Quero saber mais sobre disponibilidade, forma de uso e valor. Preço: ${pricesConfig.kitGanhoMassaInteligente === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitGanhoMassaInteligente}.`
+  },
+  {
+    id: "kit-alpha-rage",
+    name: "Kit Alpha Rage Termogênico & Foco",
+    goal: "Energia explosiva, resistência extrema e vasodilatação",
+    badge: "Destaque",
+    productsInvolved: [
+      "Pré-Treino Alpha Rage Zero Cafeína (150g - Limão ou Frutas Vermelhas)",
+      "Creatina Orenda Performance 150g",
+      "Beta-Alanina Orenda Performance 150g"
+    ],
+    description: "O combo definitivo sem estimulantes de café para explodir seus recordes de performance física, força e vascularização a qualquer hora do dia ou da noite.",
+    benefits: [
+      "Pré-Treino Alpha Rage para pump estendido",
+      "Creatina para apoiar imediatamente a força muscular e explosão",
+      "Beta-Alanina para auxiliar na redução da fadiga muscular acumulada",
+      "Total flexibilidade de horário sem prejudicar seu sono e descanso"
+    ],
+    price: pricesConfig.kitAlphaRage === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitAlphaRage,
+    whatsappMessage: `Olá, tenho interesse no Kit Alpha Rage Termogênico & Foco da Orenda Performance. Ele vem com Pré-Treino Alpha Rage 150g, Creatina 150g e Beta-Alanina 150g. Quero saber mais sobre disponibilidade, sabores e valor. Preço: ${pricesConfig.kitAlphaRage === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.kitAlphaRage}.`
   }
 ];
 
@@ -342,33 +365,63 @@ export const products: ProductItem[] = [
     whatsappMessage: `Olá, tenho interesse no ZMA Orenda Performance 60 cápsulas. Quero saber mais sobre o produto, forma de uso e disponibilidade. Valor: ${pricesConfig.zma60cap === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.zma60cap}.`
   },
   {
-    id: "zma-120cap",
-    name: "ZMA Orenda Performance 120 cápsulas",
-    category: "Minerais e Recuperação",
-    badge: "Max Proteção",
-    description: "Versão maior do ZMA Orenda, ideal para quem busca manter uma rotina contínua de suplementação com minerais essenciais.",
+    id: "pre-treino-frutas-150g",
+    name: "Pré-Treino Alpha Rage Zero Cafeína Frutas Vermelhas 150g",
+    category: "Energia e Performance",
+    badge: "Explosivo",
+    description: "Fórmula de pré-treino de alta performance zero cafeína sabor Frutas Vermelhas. Ideal para treinos noturnos com máxima dilatação e zero desconforto no sono.",
     benefits: [
-      "Maior rendimento por embalagem para uso de longo prazo",
-      "Fonte de zinco, magnésio e vitamina B6 sob rigoroso controle de pureza",
-      "Apoia a rotina esportiva sem interrupções",
-      "Ideal para quem busca consistência diária e vigor físico"
+      "Fórmula ultra concentrada livre de cafeína",
+      "Promove pump muscular estendido e vascularização intensa",
+      "Auxilia no foco extremo e contração durante treinos pesados",
+      "Sabor irresistível de frutas vermelhas"
     ],
-    price: pricesConfig.zma120cap === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.zma120cap,
-    whatsappMessage: `Olá, tenho interesse no ZMA Orenda Performance 120 cápsulas. Quero saber mais sobre o produto, forma de uso e disponibilidade. Valor: ${pricesConfig.zma120cap === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.zma120cap}.`
+    price: pricesConfig.preTreinoFrutas150g,
+    whatsappMessage: `Olá, tenho interesse no Pré-Treino Alpha Rage Zero Cafeína Frutas Vermelhas 150g. Quero saber mais sobre o produto, formas de uso e envio. Valor: ${pricesConfig.preTreinoFrutas150g}.`
   },
   {
-    id: "colageno-300g",
-    name: "Colágeno Orenda Performance 300g",
-    category: "Cuidado Corporal e Bem-Estar",
-    badge: "Bem-estar",
-    description: "Suplemento de colágeno desenvolvido para complementar a rotina diária de cuidados com o corpo, bem-estar e nutrição.",
+    id: "pre-treino-frutas-300g",
+    name: "Pré-Treino Alpha Rage Zero Cafeína Frutas Vermelhas 300g",
+    category: "Energia e Performance",
+    badge: "Melhor Custo",
+    description: "Dose dupla e rendimento superior de pré-treino zero cafeína sabor Frutas Vermelhas para quem busca manter a constância em alta intensidade.",
     benefits: [
-      "Produto extremamente versátil para agregar ao seu dia a dia",
-      "Apoia a rotina de autocuidado integrado",
-      "Pode ser combinado com sucos, vitaminas e outros suplementos",
-      "Perfeito para quem busca nutrir a beleza e saúde de dentro para fora"
+      "Excelente custo-benefício com embalagem de 300g",
+      "Vasodilatação potente e pump muscular sem estimulantes de café",
+      "Ideal para treinar à noite mantendo um ótimo descanso e sono profundo",
+      "Combinação avançada para esportes de alta intensidade"
     ],
-    price: pricesConfig.colageno300g,
-    whatsappMessage: `Olá, tenho interesse no Colágeno Orenda Performance 300g. Quero saber mais sobre o produto, forma de uso e disponibilidade. Valor: ${pricesConfig.colageno300g}.`
+    price: pricesConfig.preTreinoFrutas300g,
+    whatsappMessage: `Olá, tenho interesse no Pré-Treino Alpha Rage Zero Cafeína Frutas Vermelhas 300g. Quero saber mais sobre o produto, formas de uso e envio. Valor: ${pricesConfig.preTreinoFrutas300g}.`
+  },
+  {
+    id: "pre-treino-limao-150g",
+    name: "Pré-Treino Alpha Rage Zero Cafeína Sabor Limão 150g",
+    category: "Energia e Performance",
+    badge: "Explosivo",
+    description: "A energia ácida e refrescante do sabor Limão no seu pré-treino ultra concentrado sem cafeína. Potência máxima para os seus músculos.",
+    benefits: [
+      "Altamente concentrado para pump intenso e focado",
+      "Sensação refrescante de sabor Limão natural",
+      "Auxilia de forma ativa na vasodilatação celular e oxigenação",
+      "100% livre de cafeína - use a qualquer hora do dia ou da noite"
+    ],
+    price: pricesConfig.preTreinoLimao150g,
+    whatsappMessage: `Olá, tenho interesse no Pré-Treino Alpha Rage Zero Cafeína Limão 150g. Quero saber mais sobre o produto, formas de uso e envio. Valor: ${pricesConfig.preTreinoLimao150g}.`
+  },
+  {
+    id: "pre-treino-limao-300g",
+    name: "Pré-Treino Alpha Rage Zero Cafeína Sabor Limão 300g",
+    category: "Energia e Performance",
+    badge: "Melhor Custo",
+    description: "Tamanho família de pré-treino zero cafeína no sabor limão para quem não abre mão de treinar todos os dias na máxima potência com noites de sono tranquilas.",
+    benefits: [
+      "Embalagem ultra econômica com 300g",
+      "Reforça sua contração muscular e resistência contra fadiga",
+      "Sem agitação e sem interferir no ciclo de sono noturno",
+      "Sabor incrível cítrico e refrescante"
+    ],
+    price: pricesConfig.preTreinoLimao300g,
+    whatsappMessage: `Olá, tenho interesse no Pré-Treino Alpha Rage Zero Cafeína Limão 300g. Quero saber mais sobre o produto, formas de uso e envio. Valor: ${pricesConfig.preTreinoLimao300g}.`
   }
 ];
