@@ -43,6 +43,13 @@ import {
   ProductItem 
 } from './data';
 
+// @ts-ignore
+import creatinaImage from './assets/images/creatina_300g.png';
+// @ts-ignore
+import wheyBlendImage from './assets/images/whey_blend_chocolate.png';
+// @ts-ignore
+import betaAlaninaImage from './assets/images/beta_alanina_150g.png';
+
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>("Todos");
@@ -361,37 +368,16 @@ export default function App() {
                   </div>
 
                   {/* Supplemental Graphic Render */}
-                  <div className="relative h-64 w-full bg-black/60 rounded-xl overflow-hidden flex flex-col items-center justify-center border border-brand-gray group-hover:border-brand-light-gray/40 transition-colors">
-                    
-                    {/* Laser grid effects inside placeholder */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(214,28,28,0.1)_1px,transparent_1px)] bg-[size:100%_12px] opacity-30 animate-pulse"></div>
-                    
-                    {/* Floating Glow supplement canister mimic */}
-                    <div className="relative w-28 h-40 bg-gradient-to-b from-neutral-800 to-neutral-950 rounded-lg border border-brand-light-gray shadow-2xl flex flex-col justify-between p-3 overflow-hidden">
-                      <div className="absolute top-0 left-0 right-0 h-4 bg-brand-crimson border-b border-black"></div>
-                      
-                      <div className="z-10 mt-2">
-                        <span className="font-display font-extrabold text-[11px] block tracking-tighter text-white">ORENDA</span>
-                        <span className="text-[7px] font-mono text-brand-neon-red font-bold uppercase tracking-widest block -mt-1ENDA">PERFORMANCE</span>
-                      </div>
-                      
-                      <div className="z-10 bg-brand-black/90 p-1.5 rounded border border-brand-gray">
-                        <span className="text-[9px] font-bold text-white block uppercase text-center tracking-tight">CREATINA</span>
-                        <span className="text-[7px] font-mono text-gray-400 block text-center">PURE MONOHYDRATE</span>
-                      </div>
-                      
-                      <div className="flex justify-between items-center z-10 pt-1 border-t border-brand-gray">
-                        <span className="text-[6px] font-mono text-gray-500">BIOTECH SCI</span>
-                        <span className="text-[6px] font-mono text-brand-neon-red font-bold">100% PURA</span>
-                      </div>
-                      
-                      {/* Ambient shine overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-12"></div>
-                    </div>
-
-                    <div className="absolute bottom-3 left-3 right-3 text-center pointer-events-none mt-2">
-                      <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-                        PRODUTOS REAIS ORENDA BIOTECH
+                  <div className="relative h-64 w-full bg-white rounded-xl overflow-hidden flex flex-col items-center justify-center border border-brand-gray group-hover:border-brand-light-gray/40 transition-all duration-300">
+                    <img 
+                      src={creatinaImage} 
+                      alt="Creatina Orenda Performance 300g" 
+                      className="h-full w-auto object-contain p-2 hover:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute bottom-3 left-3 right-3 text-center bg-black/40 backdrop-blur-[2px] py-1 rounded px-2 pointer-events-none">
+                      <p className="text-[10px] font-mono text-white uppercase tracking-widest font-bold">
+                        FOTO REAL DO PRODUTO
                       </p>
                     </div>
                   </div>
@@ -1023,43 +1009,70 @@ export default function App() {
                       </div>
 
                       {/* Mock Product Canister Visual Preview */}
-                      <div className="h-44 w-full bg-brand-black rounded-lg border border-brand-gray/60 flex items-center justify-center p-3 relative overflow-hidden">
-                        
-                        {/* Glow circles */}
-                        <div className="absolute w-24 h-24 bg-brand-crimson/5 rounded-full blur-xl pointer-events-none"></div>
+                      <div className={`h-44 w-full rounded-lg border flex items-center justify-center p-3 relative overflow-hidden transition-all duration-300 ${
+                        p.id === 'creatina-300g' || p.id === 'whey-900g' || p.id === 'beta-alanina-150g'
+                          ? 'bg-white border-white/20'
+                          : 'bg-brand-black border-brand-gray/60'
+                      }`}>
+                        {p.id === 'creatina-300g' ? (
+                          <img 
+                            src={creatinaImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'whey-900g' ? (
+                          <img 
+                            src={wheyBlendImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : p.id === 'beta-alanina-150g' ? (
+                          <img 
+                            src={betaAlaninaImage} 
+                            alt={p.name} 
+                            className="h-full w-auto object-contain hover:scale-105 transition-transform duration-500" 
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : (
+                          <>
+                            {/* Glow circles */}
+                            <div className="absolute w-24 h-24 bg-brand-crimson/5 rounded-full blur-xl pointer-events-none"></div>
 
-                        {/* Canister outline mimic */}
-                        <div className="relative w-20 h-32 bg-gradient-to-b from-neutral-900 to-black border border-zinc-800 rounded-md p-2 flex flex-col justify-between text-center overflow-hidden">
-                          
-                          {/* Cap */}
-                          <div className="absolute top-0 inset-x-0 h-2 bg-brand-crimson border-b border-black"></div>
-                          
-                          {/* Content Label */}
-                          <div className="z-10 mt-1.5">
-                            <span className="text-[5px] font-mono text-gray-500 block">ORENDA LABS</span>
-                            <span className="text-[7.5px] font-display font-extrabold text-white block tracking-tighter leading-none pt-0.5">PERFORMANCE</span>
-                          </div>
+                            {/* Canister outline mimic */}
+                            <div className="relative w-20 h-32 bg-gradient-to-b from-neutral-900 to-black border border-zinc-800 rounded-md p-2 flex flex-col justify-between text-center overflow-hidden">
+                              
+                              {/* Cap */}
+                              <div className="absolute top-0 inset-x-0 h-2 bg-brand-crimson border-b border-black"></div>
+                              
+                              {/* Content Label */}
+                              <div className="z-10 mt-1.5">
+                                <span className="text-[5px] font-mono text-gray-500 block">ORENDA LABS</span>
+                                <span className="text-[7.5px] font-display font-extrabold text-white block tracking-tighter leading-none pt-0.5">PERFORMANCE</span>
+                              </div>
 
-                          {/* Center Spec */}
-                          <div className="my-1.5">
-                            <div className="bg-brand-crimson/15 border border-brand-neon-red/30 py-1.5 px-0.5 rounded text-white font-mono text-[8.5px] leading-none uppercase font-extrabold tracking-tight">
-                              {p.name.split(" ").slice(0, 2).join(" ")}
+                              {/* Center Spec */}
+                              <div className="my-1.5">
+                                <div className="bg-brand-crimson/15 border border-brand-neon-red/30 py-1.5 px-0.5 rounded text-white font-mono text-[8.5px] leading-none uppercase font-extrabold tracking-tight">
+                                  {p.name.split(" ").slice(0, 2).join(" ")}
+                                </div>
+                                <span className="text-[6px] text-gray-400 block pt-1 uppercase tracking-tight">
+                                  {p.name.slice(-4) || 'Puro'}
+                                </span>
+                              </div>
+
+                              {/* Foot Note */}
+                              <div className="flex justify-between items-center text-[5px] text-gray-500 border-t border-zinc-900 pt-1">
+                                <span>BIOTECH</span>
+                                <span className="text-brand-neon-red font-bold font-mono">100% PURE</span>
+                              </div>
+
+                              {/* Spec Glass glare */}
+                              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-45"></div>
                             </div>
-                            <span className="text-[6px] text-gray-400 block pt-1 uppercase tracking-tight">
-                              {p.name.slice(-4) || 'Puro'}
-                            </span>
-                          </div>
-
-                          {/* Foot Note */}
-                          <div className="flex justify-between items-center text-[5px] text-gray-500 border-t border-zinc-900 pt-1">
-                            <span>BIOTECH</span>
-                            <span className="text-brand-neon-red font-bold font-mono">100% PURE</span>
-                          </div>
-
-                          {/* Spec Glass glare */}
-                          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent rotate-45"></div>
-                        </div>
-
+                          </>
+                        )}
                       </div>
 
                       <div className="space-y-1">

@@ -15,9 +15,9 @@ export const pricesConfig = {
 
   // Products
   creatina150g: "Sob Consulta",
-  creatina300g: "Sob Consulta",
-  whey900g: "Sob Consulta",
-  betaAlanina150g: "Sob Consulta",
+  creatina300g: "R$ 73,85",
+  whey900g: "R$ 233,78",
+  betaAlanina150g: "R$ 49,27",
   glutamina150g: "Sob Consulta",
   glutamina300g: "Sob Consulta",
   bcaa60cap: "Sob Consulta",
@@ -221,7 +221,7 @@ export const products: ProductItem[] = [
   },
   {
     id: "whey-900g",
-    name: "Whey Blend Orenda Performance 900g",
+    name: "Whey Blend Orenda Performance 900g - Sabor Chocolate",
     category: "Proteína e Massa Muscular",
     badge: "Premium Forte",
     description: "Whey Blend proteico desenvolvido para apoiar o consumo diário de proteínas, contribuindo para a formação muscular e recuperação nutricional após treinos.",
@@ -230,10 +230,10 @@ export const products: ProductItem[] = [
       "Auxilia na formação e manutenção dos músculos",
       "Ideal para pós-treino ou complemento proteico diário",
       "Fórmula prática para quem busca evolução física",
-      "Versão premium da linha Orenda Performance"
+      "Versão premium da linha Orenda Performance- Sabor Chocolate"
     ],
     price: pricesConfig.whey900g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.whey900g,
-    whatsappMessage: `Olá, tenho interesse no Whey Blend Orenda Performance 900g. Quero saber mais sobre sabores, tabela nutricional, forma de uso e disponibilidade. Valor: ${pricesConfig.whey900g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.whey900g}.`
+    whatsappMessage: `Olá, tenho interesse no Whey Blend Orenda Performance 900g - Sabor Chocolate. Quero saber mais sobre a tabela nutricional, forma de uso e disponibilidade. Valor: ${pricesConfig.whey900g === "Sob Consulta" ? "R$ XX,XX" : pricesConfig.whey900g}.`
   },
   {
     id: "beta-alanina-150g",
